@@ -29,7 +29,16 @@ public class ConsoleExercises {
 
         System.out.println("Here is what you entered: ");
         System.out.println(word1 + "\n" + word2 + "\n" + word3 + "\n");
-        //if the user enters more than 3 words it still only prints 3
+        //if the user enters more than 3 words it still only prints 3, if you enter less than 3 words it waits for you to enter another one
 
+        //Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
+        //then rewrite the code using nextLine().
+        Scanner userSentence = new Scanner(System.in);
+
+        System.out.println("Enter a sentence:");
+
+        String sentence1 = userSentence.nextLine();
+
+        System.out.println(sentence1);
     }
 }
