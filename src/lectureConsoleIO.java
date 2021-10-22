@@ -22,5 +22,7 @@ public class lectureConsoleIO {
 
         System.out.printf("2 out of 10 is %d%%", 20);  //what is percent d?
 
+        System.out.println();
+
     }
 }
