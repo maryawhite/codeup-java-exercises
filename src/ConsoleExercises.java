@@ -8,24 +8,20 @@ public class ConsoleExercises {
         //write some code so that pi comes out as 3.14
         System.out.format("The value of pi is approximately %.2f%n", pi);
 
-        Scanner nameHerescanner = new Scanner(System.in);  //this is how we're saving the users input?
+        Scanner myScanner = new Scanner(System.in);  //this is how we're saving the users input?
 
-//        System.out.print("Please enter an integer: ");
-//
-//        String userInput = nameHerescanner.next();
-//
-//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+        System.out.print("Please enter an integer: ");
+
+        String userInput = myScanner.next();
+
+        System.out.println("You entered: --> \"" + userInput + "\" <--");
 
         //Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
-        Scanner input = new Scanner(System.in);
+        System.out.println("Enter 3 words");
 
-        System.out.println("Enter a word");
-        System.out.println("Enter a second word");
-        System.out.println("Enter a third word");
-
-        String word1 = input.next();
-        String word2 = input.next();
-        String word3 = input.next();
+        String word1 = myScanner.next();
+        String word2 = myScanner.next();
+        String word3 = myScanner.next();
 
         System.out.println("Here is what you entered: ");
         System.out.println(word1 + "\n" + word2 + "\n" + word3 + "\n");
@@ -33,12 +29,30 @@ public class ConsoleExercises {
 
         //Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
         //then rewrite the code using nextLine().
-        Scanner userSentence = new Scanner(System.in);
+        myScanner.nextLine();
 
         System.out.println("Enter a sentence:");
 
-        String sentence1 = userSentence.nextLine();
+        String sentence1 = myScanner.nextLine();
 
         System.out.println(sentence1);
+
+        //Prompt the user to enter values of length and width of a classroom.
+        //Use the nextLine method to get user input and parse the resulting string to a numeric type.
+
+        System.out.println("Enter the length of the room:");
+        System.out.println("Enter the width of the room:");
+
+        String width = myScanner.nextLine();
+
+        int width1 = Integer.parseInt(width);
+
+        String length = myScanner.nextLine();
+
+        int length1 = Integer.parseInt(length);
+
+        System.out.println("The area is " + width1 * length1);
+        System.out.println("The perimeter is " + 2 * width1 + 2 * length1);
+
     }
 }
