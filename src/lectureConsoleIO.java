@@ -19,5 +19,8 @@ public class lectureConsoleIO {
         String userInput = scanner.nextLine();
 
         System.out.println("You entered: --> \"" + userInput + "\" <--");
+
+        System.out.printf("2 out of 10 is %d%%", 20);  //what is percent d?
+
     }
 }
