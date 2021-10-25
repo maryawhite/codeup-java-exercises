@@ -14,15 +14,22 @@ public class lectureConsoleIO {
 //
 //        System.out.printf("%s, %s", greeting, cohortName);
 
-        System.out.print("Enter Something: ");
+//        System.out.print("Enter Something: ");
+//
+//        String userInput = scanner.nextLine();
+//
+//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//
+//        System.out.printf("2 out of 10 is %d%%", 20);  //what is percent d?
+//
+//        System.out.println();
 
-        String userInput = scanner.nextLine();
+        System.out.print("Hello ");  //print prints everything on one line--the cursor remains at the end of the text at the console
+        System.out.print("World ");
+        System.out.println("Goodbye");  //println prints the next word on a new line--the cursor goes to the next line
+        System.out.println();           //println will work with or without a parameter
+        System.out.println("World");
 
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
-
-        System.out.printf("2 out of 10 is %d%%", 20);  //what is percent d?
-
-        System.out.println();
 
     }
 }

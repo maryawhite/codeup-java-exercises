@@ -14,7 +14,8 @@ public class ConsoleExercises {
 
         String userInput = myScanner.next();
 
-        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//        System.out.println("You entered: --> \"" + userInput + "\" <--");
+        System.out.printf("You entered: --> %s%n <--", userInput);
 
         //Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
         System.out.println("Enter 3 words");
@@ -42,17 +43,50 @@ public class ConsoleExercises {
 
         System.out.println("Enter the length of the room:");
         System.out.println("Enter the width of the room:");
+        System.out.println("Enter the height of the room");
 
         String width = myScanner.nextLine();
 
-        int width1 = Integer.parseInt(width);
+        double width1 = Double.parseDouble(width);
 
         String length = myScanner.nextLine();
 
-        int length1 = Integer.parseInt(length);
+        double length1 = Double.parseDouble(length);
 
-        System.out.println("The area is " + width1 * length1);
-        System.out.println("The perimeter is " + 2 * width1 + 2 * length1);
+        String height = myScanner.nextLine();
 
+        double height1 = Double.parseDouble(height);
+
+        double area = length1 * width1;
+
+        double volume = area * height1;
+
+        System.out.println("The area is " + area);
+        System.out.println("The perimeter is " + 2 * (width1 + length1));
+        System.out.printf("The volume is %f", volume);
+        //volume is (l x w) x h  or area x h
+
+
+        //bonus
+        //a. In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in
+        //   addition to the area and perimeter
+
+        //b. The Scanner class can be told specifically what characters or pattern separates tokens in a piece
+        //   of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner, scanner.useDelimiter("\n");
+        //# Console IO Exercises
+        //1. Prompt the user to enter a favorite quote
+        //    - output the quote
+        //    - ask them to enter how many words are in the quote
+        //    - output the number they entered
+        //    - output if the number they entered indeed matched the number of words
+        //2. Prompt the user to enter a list of top three favorite foods separated by only spaces
+        //    - Use the printf() to output the three top foods with the format:
+        //        1. FirstFood
+        //        2. SecondFood
+        //        3. ThirdFood
+        //3. Prompt the user to enter a grocery list of three items
+        //    - each item should only be separated by a comma (no spaces)
+        //    - you will need to use the .useDelimiter() method on your scanner object
+        //    - output the result as a comma-separated list using printf()
     }
 }
