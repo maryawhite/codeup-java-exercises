@@ -10,6 +10,8 @@ public class ConsoleExercises {
 
         Scanner myScanner = new Scanner(System.in);  //this is how we're saving the users input?
 
+//        myScanner.useDelimiter("\n");  //the only difference I see here, is it makes me enter my 3 words on separate lines
+
         System.out.print("Please enter an integer: ");
 
         String userInput = myScanner.next();
