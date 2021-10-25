@@ -11,13 +11,15 @@ public class ConsoleExercises {
         Scanner myScanner = new Scanner(System.in);  //this is how we're saving the users input?
 
 //        myScanner.useDelimiter("\n");  //the only difference I see here, is it makes me enter my 3 words on separate lines
+        //the Delimiter by default is white space, so next looks for white space by default.
 
         System.out.print("Please enter an integer: ");
 
-        String userInput = myScanner.next();
+//        String userInput = myScanner.next();
+        int userInput = myScanner.nextInt();
 
 //        System.out.println("You entered: --> \"" + userInput + "\" <--");
-        System.out.printf("You entered: --> %s%n <--", userInput);
+        System.out.printf("You entered: --> %d%n <--", userInput);
 
         //Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
         System.out.println("Enter 3 words");
@@ -48,14 +50,12 @@ public class ConsoleExercises {
         System.out.println("Enter the height of the room");
 
         String width = myScanner.nextLine();
+        String length = myScanner.nextLine();
+        String height = myScanner.nextLine();
 
         double width1 = Double.parseDouble(width);
 
-        String length = myScanner.nextLine();
-
         double length1 = Double.parseDouble(length);
-
-        String height = myScanner.nextLine();
 
         double height1 = Double.parseDouble(height);
 
@@ -76,6 +76,7 @@ public class ConsoleExercises {
         //b. The Scanner class can be told specifically what characters or pattern separates tokens in a piece
         //   of input with the useDelimiter method. Add the following line of code to your application after you have created a scanner, scanner.useDelimiter("\n");
         //# Console IO Exercises
+
         //1. Prompt the user to enter a favorite quote
         //    - output the quote
         //    - ask them to enter how many words are in the quote
