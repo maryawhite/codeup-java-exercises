@@ -71,7 +71,27 @@ public class ControlFlowExercises {
             System.out.printf("%-7d%n", i*i*i);
         }
 
+        System.out.print("Enter a numerical grade from 0-100. ");
 
+        int grade = scanner.nextInt();
+
+        if(grade <= 100 && grade >= 88){
+            System.out.println("Your grade is an A");
+        } else if(grade <= 87 && grade >= 80) {
+            System.out.println("Your grade is a B");
+        } else if(grade <= 79 && grade >= 67){
+            System.out.println("Your grade is a C");
+        } else if (grade <= 66 && grade >= 60){
+            System.out.println("Your grade is a D");
+        } else if (grade <= 59 && grade >= 0){
+            System.out.println("Your grade is a F");
+        } else {
+            System.out.println("Sorry, invalid input");
+        }
+
+        System.out.print("Continue? [y/N] ");
+        String userInput = scanner.next();
+        boolean confirmation = userInput.equals("y");
 
     }
 }
