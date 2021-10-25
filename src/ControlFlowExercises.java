@@ -21,11 +21,23 @@ public class ControlFlowExercises {
 //            i -= 5;
 //        } while (i >= -10);
 
-        long i = 2;   //this needs to be long, not int
-        do{
-            System.out.println(i);
-            i *= i;
-        } while (i < 1000000);
+//        long i = 2;   //this needs to be long, not int
+//        do{
+//            System.out.println(i);
+//            i *= i;
+//        } while (i < 1000000);
+
+//        for(int i = 100; i >= -10; i -= 5){
+//            System.out.print(i + " ");
+//        }
+//
+//        for(long i = 2; i < 1000000; i *= i){
+//            System.out.println(i);
+//        }
+
+        for(int i = 0; i <= 100; i += 2){
+            System.out.print(i + " ");
+        }
 
     }
 }
