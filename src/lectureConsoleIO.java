@@ -30,6 +30,32 @@ public class lectureConsoleIO {
         System.out.println();           //println will work with or without a parameter
         System.out.println("World");
 
+        boolean isSunny = false;
+        boolean hasUmbrella = true;
+
+        if(isSunny){
+            System.out.println("Enjoy the sunshine - don't forget to wear sunscreen");
+        } else if (!isSunny && hasUmbrella){
+            System.out.println("good job remembering your umbrella");
+        } else {
+            System.out.println("Go check the weather");
+        }
+
+        int caseSwitch = 1;
+
+        switch (caseSwitch) {
+            case 1:
+                System.out.println("Case 1");
+                break;
+            case 2:
+                System.out.println("Case 2");
+                break;
+            default:
+                System.out.println("Default case");
+                break;
+        }
+
+
 
     }
 }
