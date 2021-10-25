@@ -55,7 +55,32 @@ public class lectureConsoleIO {
                 break;
         }
 
+//        int i = 0;
+//        while (i < 10) {
+//            System.out.println("i is " + i);
+//            i++;
+//        }
 
+//        do {
+//            System.out.println("You will see this despite the condition!");
+//        } while (false);
+
+        //remember to declare the type in the for loop
+//        for(int i = 0; i < 25; i++){
+//            System.out.println(("i is " + i));
+//            if (i == 5){
+//                break;
+//            }
+//        }
+
+        //the code below will print the odd numbers (bc it is skipping evens)
+        for(int i = 0; i < 25; i++){
+            if (i % 2 == 0){
+                continue;
+            }
+            System.out.println(i);
+        }
 
     }
+
 }
