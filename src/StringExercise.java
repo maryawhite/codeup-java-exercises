@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class StringExercise {
+public class StringExercise {
+
+    public static void main(String[] args) {
+
+    }
 }
