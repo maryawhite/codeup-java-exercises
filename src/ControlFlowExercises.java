@@ -56,24 +56,24 @@ public class ControlFlowExercises {
 
         //consider using a variable like boolean divBy3 = (i % 3) == 0;
 
-        boolean confirm1;
-        do {
-        System.out.print("What number would you like to go up to? ");
-
-        int output = scanner.nextInt();
-
-        System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-
-            for (int i = 1; i <= output; i++) {
-                System.out.printf("%-7d| %-9d| %-6d\n", i, i * i, i * i * i);
-//            System.out.printf("%-7d", i*i);
-//            System.out.printf("%-7d%n", i*i*i);
-            }
-            System.out.println("Continue? [Y/N] ");
-            confirm1 = scanner.next().equalsIgnoreCase("y");
-        } while(confirm1);
+//        boolean confirm1;
+//        do {
+//        System.out.print("What number would you like to go up to? ");
+//
+//        int output = scanner.nextInt();
+//
+//        System.out.println("Here is your table!");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//            for (int i = 1; i <= output; i++) {
+//                System.out.printf("%-7d| %-9d| %-6d\n", i, i * i, i * i * i);
+////            System.out.printf("%-7d", i*i);
+////            System.out.printf("%-7d%n", i*i*i);
+//            }
+//            System.out.println("Continue? [Y/N] ");
+//            confirm1 = scanner.next().equalsIgnoreCase("y");
+//        } while(confirm1);
 
 //        String userInput ="";
 //        do {
@@ -98,6 +98,40 @@ public class ControlFlowExercises {
 //            System.out.println("Continue? [Y/N] ");
 //            userInput = scanner.next();
 //        } while(userInput.equals("Y") || userInput.equals("y"));
+
+        //bonus simple chatbot
+        boolean anotherQ;
+        do {
+            System.out.println("How are you?");
+            String reply = scanner.nextLine();
+            if (reply.equalsIgnoreCase("good") || reply.equalsIgnoreCase("great")) {
+                System.out.println("Awesome! Are you super happy? [Y/N] ");
+                String nextQuestion = scanner.nextLine();
+                    if(nextQuestion.equalsIgnoreCase("y")){
+                        System.out.println("Yes? I'm glad to hear that.");
+                    } else {
+                        System.out.println("No? Tomorrow's another day.");
+                    }
+            } else if (reply.equalsIgnoreCase("bad") || reply.equalsIgnoreCase("not good")) {
+                System.out.print("Will cake make you better [Y/N]");
+                String nextQuestionbad = scanner.nextLine();
+                    if(nextQuestionbad.equalsIgnoreCase("y")){
+                        System.out.println("Would you like German Chocolate or Yellow Cake?");
+                            String cakeChoice = scanner.nextLine();
+                            if(cakeChoice.equalsIgnoreCase("german chocolate") || cakeChoice.equalsIgnoreCase("yellow cake")){
+                                System.out.println("That sounds delightful.");
+                            } else {
+                                System.out.println("I'm not familiar with that cake.");
+                            }
+                    } else {
+                        System.out.println("Who doesn't like cake?");
+                    }
+            } else {
+                System.out.println("Please rephrase your answer");
+            }
+            System.out.println("May I ask you again? [Y/N] ");
+            anotherQ = scanner.nextLine().equalsIgnoreCase("y");
+        }while(anotherQ);
 
         scanner.close();
 
