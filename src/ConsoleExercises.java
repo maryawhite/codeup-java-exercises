@@ -4,69 +4,88 @@ public class ConsoleExercises {
 
     public static void main(String[] args) {
 
-        double pi = 3.14159;
-        //write some code so that pi comes out as 3.14
-        System.out.format("The value of pi is approximately %.2f%n", pi);
+//        double pi = 3.14159;
+//        //write some code so that pi comes out as 3.14
+//        System.out.format("The value of pi is approximately %.2f%n", pi);
 
         Scanner myScanner = new Scanner(System.in);  //this is how we're saving the users input?
 
 //        myScanner.useDelimiter("\n");  //the only difference I see here, is it makes me enter my 3 words on separate lines
         //the Delimiter by default is white space, so next looks for white space by default.
 
-        System.out.print("Please enter an integer: ");
-
-//        String userInput = myScanner.next();
-        int userInput = myScanner.nextInt();
-
-//        System.out.println("You entered: --> \"" + userInput + "\" <--");
-        System.out.printf("You entered: --> %d%n <--", userInput);
+//        System.out.print("Please enter an integer: ");
+//
+////        String userInput = myScanner.next();
+//        int userInput = myScanner.nextInt();
+//
+////        System.out.println("You entered: --> \"" + userInput + "\" <--");
+//        System.out.printf("You entered: --> %d%n <--", userInput);
 
         //Prompt a user to enter 3 words, and store each of them in a separate variable. Then, display them back in the console, each on a newline.
-        System.out.println("Enter 3 words");
-
-        String word1 = myScanner.next();
-        String word2 = myScanner.next();
-        String word3 = myScanner.next();
-
-        System.out.println("Here is what you entered: ");
-        System.out.println(word1 + "\n" + word2 + "\n" + word3 + "\n");
+//        System.out.println("Enter 3 words");
+//
+//        String word1 = myScanner.next();
+//        String word2 = myScanner.next();
+//        String word3 = myScanner.next();
+//
+//        System.out.println("Here is what you entered: ");
+//        System.out.println(word1 + "\n" + word2 + "\n" + word3 + "\n");
         //if the user enters more than 3 words it still only prints 3, if you enter less than 3 words it waits for you to enter another one
 
         //Prompt a user to enter a sentence, then store that sentence in a String variable using the next method. Then, display that sentence back to the user.
         //then rewrite the code using nextLine().
-        myScanner.nextLine();
-
-        System.out.println("Enter a sentence:");
-
-        String sentence1 = myScanner.nextLine();
-
-        System.out.println(sentence1);
+//        myScanner.nextLine();
+//
+//        System.out.println("Enter a sentence:");
+//
+//        String sentence1 = myScanner.nextLine();
+//
+//        System.out.println(sentence1);
 
         //Prompt the user to enter values of length and width of a classroom.
         //Use the nextLine method to get user input and parse the resulting string to a numeric type.
 
-        System.out.println("Enter the length of the room:");
-        System.out.println("Enter the width of the room:");
-        System.out.println("Enter the height of the room");
-
-        String width = myScanner.nextLine();
-        String length = myScanner.nextLine();
-        String height = myScanner.nextLine();
-
-        double width1 = Double.parseDouble(width);
-
-        double length1 = Double.parseDouble(length);
-
-        double height1 = Double.parseDouble(height);
-
-        double area = length1 * width1;
-
-        double volume = area * height1;
-
-        System.out.println("The area is " + area);
-        System.out.println("The perimeter is " + 2 * (width1 + length1));
-        System.out.printf("The volume is %f", volume);
+//        System.out.println("Enter the length of the room:");
+//        System.out.println("Enter the width of the room:");
+//        System.out.println("Enter the height of the room");
+//
+//        String width = myScanner.nextLine();
+//        String length = myScanner.nextLine();
+//        String height = myScanner.nextLine();
+//
+//        double width1 = Double.parseDouble(width);
+//
+//        double length1 = Double.parseDouble(length);
+//
+//        double height1 = Double.parseDouble(height);
+//
+//        double area = length1 * width1;
+//
+//        double volume = area * height1;
+//
+//        System.out.println("The area is " + area);
+//        System.out.println("The perimeter is " + 2 * (width1 + length1));
+//        System.out.printf("The volume is %f", volume);
         //volume is (l x w) x h  or area x h
+
+        System.out.println("What is your favorite quote?");
+
+        String userQuote = myScanner.nextLine();
+        System.out.printf("You entered: %s%n", userQuote);
+
+        String userQuoteArray[] = userQuote.split(" ");
+
+        System.out.println("How many words are in the quote?");
+
+        int youSaid = myScanner.nextInt();
+        System.out.printf("You said: %s. ", youSaid);
+        if(youSaid == userQuoteArray.length){
+            System.out.print("Indeed, there are " + userQuoteArray.length + " words.");
+        } else {
+            System.out.print("No, I don't think that's right.");
+        }
+
+
 
 
         //bonus
