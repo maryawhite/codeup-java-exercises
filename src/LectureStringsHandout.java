@@ -1,7 +1,10 @@
 import java.util.Locale;
+import java.util.Scanner;
 
 public class LectureStringsHandout {
     public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
 
         // ' ~ " * "strings" * " ~ '
         //Strings can be given a more formal definition - some letters, numbers, and special characters combined (STRUNG together) in some fashion
@@ -14,17 +17,17 @@ public class LectureStringsHandout {
 //        }
 
         //Utilize the methods introduced here instead for consistency and reliability:
-        if("This is a string".equals("This is a string")){
-            System.out.println("Everything is a-okay over here! We used .equals, so we're feeling confident in what's going on with our code.");
-        }
+//        if("This is a string".equals("This is a string")){
+//            System.out.println("Everything is a-okay over here! We used .equals, so we're feeling confident in what's going on with our code.");
+//        }
 
         // ' ~ " * "string comparison methods" * " ~ '
 
         //Expanding on the thought above: we have a range of string comparison methods! These include a couple we've seen (.equals and its sibling .equalsIgnoreCase), but there are also a couple prefix/suffix focused methods (.starsWith  vs .endsWith)
 
         //.equals + .equalsIgnoreCase (casematch the total string or ignore the casing of the total string?)
-        String txCapitalCity = "Austin";
-        String lowercaseTxCapitalCity = "austin";
+//        String txCapitalCity = "Austin";
+//        String lowercaseTxCapitalCity = "austin";
 //        System.out.println("txCapitalCity = " + txCapitalCity);
 //        System.out.println("lowercaseTxCapitalCity = " + lowercaseTxCapitalCity);
 //        System.out.println("lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity) = " + lowercaseTxCapitalCity.equals(lowercaseTxCapitalCity));
@@ -34,8 +37,8 @@ public class LectureStringsHandout {
 //        System.out.println("txCapitalCity contains 'tin' = " + txCapitalCity.contains("tin"));
 
 //        //.startsWith + .endsWith
-        String austinSentence = "The capital city of Texas is " + txCapitalCity + ", and it is growing quickly.";
-        System.out.println(austinSentence);
+//        String austinSentence = "The capital city of Texas is " + txCapitalCity + ", and it is growing quickly.";
+//        System.out.println(austinSentence);
 //        System.out.println("austinSentence.startsWith(\"The capital city\") = " + austinSentence.startsWith("The capital city"));
 //        System.out.println("austinSentence.startsWith(\"the capital city\") = " + austinSentence.startsWith("the capital city"));
 //        System.out.println("austinSentence.startsWith(\"The capitol city\") = " + austinSentence.startsWith("The capitol city"));
@@ -49,8 +52,8 @@ public class LectureStringsHandout {
 //        //' ~ " * "string manipulation methods" * " ~ '
 //
 //        // .indexOf [search start to finish], .lastIndexOf [start end to finish], .charAt(int index)
-        System.out.println();
-        System.out.println("austinSentence = " + austinSentence);
+//        System.out.println();
+//        System.out.println("austinSentence = " + austinSentence);
 //        System.out.println("austinSentence.indexOf('x') = " + austinSentence.indexOf('x'));
 //        System.out.println("austinSentence.charAt(20) = " + austinSentence.charAt(20));
 //        System.out.println("austinSentence.charAt(21) = " + austinSentence.charAt(21));
@@ -69,7 +72,7 @@ public class LectureStringsHandout {
 //        System.out.println("austinSentence.lastIndexOf(\"is\") = " + austinSentence.lastIndexOf("is"));
 //        System.out.println("austinSentence.indexOf(\"i\") = " + austinSentence.indexOf("i"));
 //        System.out.println("austinSentence.lastIndexOf(\"i\") = " + austinSentence.lastIndexOf("i"));
-        System.out.println();
+//        System.out.println();
 //
 //        //int length() - returns length of string
 //        System.out.println("austinSentence = " + austinSentence);
@@ -79,8 +82,8 @@ public class LectureStringsHandout {
 //        System.out.println();
 //
 //        //String .replace(searchPattern, replacementString) - Returns a copy of the string with the matching pattern replaced by the second argument
-        String newcapitalSentence = austinSentence.replace("is Austin, and it is", "was five other cities before Austin, and the state is");
-        System.out.println("newcapitalSentence = " + newcapitalSentence);
+//        String newcapitalSentence = austinSentence.replace("is Austin, and it is", "was five other cities before Austin, and the state is");
+//        System.out.println("newcapitalSentence = " + newcapitalSentence);
 
         //.toLowerCase() & toUpperCase()
 //        System.out.println("txCapitalCity = " + txCapitalCity);
@@ -98,6 +101,22 @@ public class LectureStringsHandout {
         String hannah = "Did Hannah see bees? Hannah did.";
         System.out.println("hannah.length() = " + hannah.length());
         System.out.println("hannah.charAt(12) = " + hannah.charAt(12));
+        System.out.println("hannah.indexOf(\"b\") = " + hannah.indexOf("b"));
+
+        String catOrCar = "Was it a car or a cat I saw?";
+        System.out.println("catOrCar.substring(9, 12) = " + catOrCar.substring(9, 12));
+
+        String myName = "Mary White";
+        System.out.println("myName.charAt(0) = " + myName.charAt(0));
+        System.out.println("myName.indexOf(\" \") = " + myName.indexOf(" "));
+        System.out.println(myName.charAt(0) + "." + myName.charAt((myName.indexOf(" ") + 1)) + ".");
+        System.out.println(myName.charAt(0) + "." + myName.charAt(5) + ".");
+
+        System.out.println("Enter your first and last name: ");
+        String yourName = scanner.nextLine();
+        System.out.println(yourName.charAt(0) + "." + yourName.charAt((yourName.indexOf(" ") + 1)) + ".");
+
+
 
 
     }
