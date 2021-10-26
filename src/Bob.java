@@ -22,7 +22,7 @@ public class Bob {
 
             if (question.endsWith("?")) {
                 System.out.println(sure);
-            } else if (question.equals(question.toUpperCase()) && question.length() > 0) {
+            } else if (question.equals(question.toUpperCase()) && question.length() > 0 || question.endsWith("!")) {
                 System.out.println(whoa);
             } else if (question.trim().isEmpty()) {
                 System.out.println(beThatWay);
