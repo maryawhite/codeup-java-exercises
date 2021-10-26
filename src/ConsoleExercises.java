@@ -10,7 +10,7 @@ public class ConsoleExercises {
 
         Scanner myScanner = new Scanner(System.in);  //this is how we're saving the users input?
 
-//        myScanner.useDelimiter("\n");  //the only difference I see here, is it makes me enter my 3 words on separate lines
+        myScanner.useDelimiter(",");  //the only difference I see here, is it makes me enter my 3 words on separate lines
         //the Delimiter by default is white space, so next looks for white space by default.
 
 //        System.out.print("Please enter an integer: ");
@@ -85,15 +85,18 @@ public class ConsoleExercises {
 //            System.out.print("No, I don't think that's right.");
 //        }
 
-        System.out.print("Enter your three favorite foods separated by only spaces. ");
-        String faveFoods1 = myScanner.next();
-        String faveFoods2 = myScanner.next();
-        String faveFoods3 = myScanner.next();
-        System.out.printf("1. %s%n2. %s%n3. %s%n", faveFoods1, faveFoods2, faveFoods3);
-//        System.out.printf("1. %s%n", faveFoods1);
-//        System.out.printf("2. %s%n", faveFoods2);
-//        System.out.printf("3. %s%n", faveFoods3);
+//        System.out.print("Enter your three favorite foods separated by only spaces. ");
+//        String faveFoods1 = myScanner.next();
+//        String faveFoods2 = myScanner.next();
+//        String faveFoods3 = myScanner.next();
+//        System.out.printf("1. %s%n2. %s%n3. %s%n", faveFoods1, faveFoods2, faveFoods3);
+////        System.out.printf("1. %s%n", faveFoods1);
+////        System.out.printf("2. %s%n", faveFoods2);
+////        System.out.printf("3. %s%n", faveFoods3);
 
+        System.out.print("Enter a grocery list of 3 items separated by a comma with no spaces. ");
+        String groceryList = myScanner.nextLine();
+        System.out.printf("%s", groceryList);
 
         //bonuses
         //a. In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in
