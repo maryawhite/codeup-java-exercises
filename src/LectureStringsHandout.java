@@ -95,5 +95,10 @@ public class LectureStringsHandout {
         System.out.println("paddingAustin = " + paddingAustin + ".");
         System.out.println("paddingAustin.trim() = " + paddingAustin.trim() + ".");
 
+        String hannah = "Did Hannah see bees? Hannah did.";
+        System.out.println("hannah.length() = " + hannah.length());
+        System.out.println("hannah.charAt(12) = " + hannah.charAt(12));
+
+
     }
 }
