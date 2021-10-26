@@ -68,22 +68,22 @@ public class ConsoleExercises {
 //        System.out.printf("The volume is %f", volume);
         //volume is (l x w) x h  or area x h
 //
-//        System.out.println("What is your favorite quote?");
-//
-//        String userQuote = myScanner.nextLine();
-//        System.out.printf("You entered: %s%n", userQuote);
-//
-//        String userQuoteArray[] = userQuote.split(" ");
-//
-//        System.out.println("How many words are in the quote?");
-//
-//        int youSaid = myScanner.nextInt();
-//        System.out.printf("You said: %s. ", youSaid);
-//        if(youSaid == userQuoteArray.length){
-//            System.out.print("Indeed, there are " + userQuoteArray.length + " words.");
-//        } else {
-//            System.out.print("No, I don't think that's right.");
-//        }
+        System.out.println("What is your favorite quote?");
+
+        String userQuote = myScanner.nextLine();
+        System.out.printf("You entered: %s%n", userQuote);
+
+        String userQuoteArray[] = userQuote.split(" ");
+
+        System.out.println("How many words are in the quote?");
+
+        int youSaid = myScanner.nextInt();
+        System.out.printf("You said: %s. ", youSaid);
+        if(youSaid == userQuoteArray.length){
+            System.out.print("Indeed, there are " + userQuoteArray.length + " words.");
+        } else {
+            System.out.print("No, I don't think that's right.");
+        }
 
 //        System.out.print("Enter your three favorite foods separated by only spaces. ");
 //        String faveFoods1 = myScanner.next();
