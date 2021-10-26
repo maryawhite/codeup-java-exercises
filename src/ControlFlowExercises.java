@@ -66,7 +66,6 @@ public class ControlFlowExercises {
         System.out.println("number | squared | cubed");
         System.out.println("------ | ------- | -----");
 
-
             for (int i = 1; i <= output; i++) {
                 System.out.printf("%-7d| %-9d| %-6d\n", i, i * i, i * i * i);
 //            System.out.printf("%-7d", i*i);
