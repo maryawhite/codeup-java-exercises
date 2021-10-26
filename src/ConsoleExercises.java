@@ -67,28 +67,35 @@ public class ConsoleExercises {
 //        System.out.println("The perimeter is " + 2 * (width1 + length1));
 //        System.out.printf("The volume is %f", volume);
         //volume is (l x w) x h  or area x h
+//
+//        System.out.println("What is your favorite quote?");
+//
+//        String userQuote = myScanner.nextLine();
+//        System.out.printf("You entered: %s%n", userQuote);
+//
+//        String userQuoteArray[] = userQuote.split(" ");
+//
+//        System.out.println("How many words are in the quote?");
+//
+//        int youSaid = myScanner.nextInt();
+//        System.out.printf("You said: %s. ", youSaid);
+//        if(youSaid == userQuoteArray.length){
+//            System.out.print("Indeed, there are " + userQuoteArray.length + " words.");
+//        } else {
+//            System.out.print("No, I don't think that's right.");
+//        }
 
-        System.out.println("What is your favorite quote?");
-
-        String userQuote = myScanner.nextLine();
-        System.out.printf("You entered: %s%n", userQuote);
-
-        String userQuoteArray[] = userQuote.split(" ");
-
-        System.out.println("How many words are in the quote?");
-
-        int youSaid = myScanner.nextInt();
-        System.out.printf("You said: %s. ", youSaid);
-        if(youSaid == userQuoteArray.length){
-            System.out.print("Indeed, there are " + userQuoteArray.length + " words.");
-        } else {
-            System.out.print("No, I don't think that's right.");
-        }
+        System.out.print("Enter your three favorite foods separated by only spaces. ");
+        String faveFoods1 = myScanner.next();
+        String faveFoods2 = myScanner.next();
+        String faveFoods3 = myScanner.next();
+        System.out.printf("1. %s%n2. %s%n3. %s%n", faveFoods1, faveFoods2, faveFoods3);
+//        System.out.printf("1. %s%n", faveFoods1);
+//        System.out.printf("2. %s%n", faveFoods2);
+//        System.out.printf("3. %s%n", faveFoods3);
 
 
-
-
-        //bonus
+        //bonuses
         //a. In your perimeter/area calculator: - Accept decimal entries. - Calculate the volume of the rooms in
         //   addition to the area and perimeter
 
@@ -110,5 +117,7 @@ public class ConsoleExercises {
         //    - each item should only be separated by a comma (no spaces)
         //    - you will need to use the .useDelimiter() method on your scanner object
         //    - output the result as a comma-separated list using printf()
+        myScanner.close();
+
     }
 }
