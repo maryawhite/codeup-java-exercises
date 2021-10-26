@@ -82,5 +82,33 @@ public class lectureConsoleIO {
         }
 
     }
+    public static void promptInput(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter 2 numbers: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        System.out.println("Would you like to add, subtract, multiply, or divide?");
+        String input = scanner.next();
+    }
+
+    public static void calculate(int num1, int num2, String input){
+        switch (input){
+            case "add":
+                System.out.println("sum: " + (num1 + num2));
+                break;
+            case "subtract":
+                System.out.println("subtract: " + (num1 - num2));
+                break;
+            case "multiply":
+                System.out.println("multiply: " + (num1 * num2));
+                break;
+            case "divide":
+                System.out.println(("divide: " + num1 / num2));
+                break;
+            default:
+                System.out.println("idk");
+                break;
+        }
+    }
 
 }
