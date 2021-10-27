@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -47,20 +48,47 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         String reply;
         long fact;
-        String middle = "";
+        String middle = "1";
         do {
             fact = 1;
             int userNumberF = getInteger(1, 10);
             for (int i = 1; i <= userNumberF; i++) {
+                if(i > 1){
                 middle += " x " + i;
+                }
                 fact = fact * i;
-                System.out.printf("%2d! = %-45s = %d%n", i, middle, fact);
+                System.out.printf("%2d! = %-40s = %d%n", i, middle, fact);
             }
             System.out.println("The Factorial of your number is: " + fact);
             System.out.println("Would you like to enter another number to factorial? Y/N");
             reply = scanner.nextLine();
         }while(reply.equalsIgnoreCase("y"));
             return fact;
+    }
+
+    public static int generateRandomNum(int max, int min){   //from min to max
+        return ((int) (Math.random()*(max - min))) + min;
+    }
+
+    public static int diceRoll(){
+        int response;
+        String r;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many sides does your dice have? ");
+        response = scanner.nextInt();
+        System.out.println("you said " + response);
+        System.out.println("Do you want to roll the dice. Press r to roll the dice");
+        r = scanner.nextLine();
+        int randomNum;
+        while(r.equalsIgnoreCase("r")) {
+            randomNum = generateRandomNum(response,1);
+            System.out.println("your random number is " + randomNum);
+            return randomNum;
+        }
+//        } else {
+//            return diceRoll();
+//        }
+        return response;
     }
 
 
@@ -74,6 +102,8 @@ public class MethodsExercises {
         int aNumber = getInteger(1, 10);
         System.out.println("you entered: " + aNumber);
         factorial();
+        diceRoll();
+
     }
 
     }
