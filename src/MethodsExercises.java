@@ -36,6 +36,7 @@ public class MethodsExercises {
         System.out.println("Enter a number between " + min + " and " + max);
         userNumber = scanner.nextInt();
         if(userNumber <= max && userNumber >= min){
+            System.out.println("thanks");
             return userNumber;
         } else {
             userNumber = getInteger(min, max);
@@ -52,6 +53,18 @@ public class MethodsExercises {
         System.out.println("multiplyLoop: " + multiplyLoop(15, 3));
         System.out.println("remainder: " + remainder(15, 3));
         getInteger(1, 10);
+
+        System.out.println("Enter a number between 1 and 10");
+        int userNumberF;
+        Scanner scanner = new Scanner(System.in);
+        userNumberF = scanner.nextInt();
+        if (userNumberF <= 10 && userNumberF >= 1) {
+            long fact = 1;
+            for (int i = 1; i <= userNumberF; i++) {
+                fact = fact * i;
+            }
+            System.out.println("factorial of " + userNumberF + " is " + fact);
+        }
     }
 
     }
