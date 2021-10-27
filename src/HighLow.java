@@ -14,22 +14,31 @@ public class HighLow {
             int result = random.nextInt(99);  //generate a number from 0 to 99
             result += 1;                            //trying to get it to be 1-100, not 0-99.
 
-//        System.out.println("The random number is: " + result);
+        System.out.println("The random number is: " + result);
+
+            int tries = 0;
 
             while (true) {
                 int userGuess = MethodsExercises.getInteger(0, 100);  //this pulls my method from another file and asks the user to enter a number from 1-100
 
                 if (userGuess < result) {
                     System.out.println("guess HIGHER!");
-                } else if (userGuess > result) {
-                    System.out.println("guess LOWER!");
-                } else if (userGuess == result) {
-                    System.out.println("CONGRATS!!! Good Guess, that's correct");
-                    break; //stop the loop
+                    tries++;
                 } else {
-                    System.out.println("not valid");
+                    if (userGuess > result) {
+                        System.out.println("guess LOWER!");
+                        tries++;
+                    } else if (userGuess == result) {
+                        tries++;
+                        System.out.println("CONGRATS!!! Good Guess, that's correct. Number of tries " + tries);
+                        break; //stop the loop
+                    } else {
+                        System.out.println("not valid");
+                    }
+                    tries++;
                 }
             }
+            tries = 0;
             System.out.print("Would you like to play again? Y/N");
             confirm = scanner.next().equalsIgnoreCase("y");
         }while(confirm);
