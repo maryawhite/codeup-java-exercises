@@ -39,9 +39,26 @@ public class MethodsExercises {
             System.out.println("thanks");
             return userNumber;
         } else {
-            userNumber = getInteger(min, max);
+            return getInteger(min, max);
         }
-        return userNumber;
+    }
+
+    public static long factorial(){
+        Scanner scanner = new Scanner(System.in);
+        String reply;
+        long fact;
+        do {
+            fact = 1;
+            int userNumberF = getInteger(1, 10);
+            for (int i = 1; i <= userNumberF; i++) {
+                fact = fact * i;
+                System.out.println(userNumberF + "! = " + i + " x" + fact);
+            }
+            System.out.println("The Factorial of your number is: " + fact);
+            System.out.println("Would you like to enter another number to factorial? Y/N");
+            reply = scanner.nextLine();
+        }while(reply.equalsIgnoreCase("y"));
+            return fact;
     }
 
 
@@ -52,19 +69,9 @@ public class MethodsExercises {
         System.out.println("multiply: " + multiply(15, 3));
         System.out.println("multiplyLoop: " + multiplyLoop(15, 3));
         System.out.println("remainder: " + remainder(15, 3));
-        getInteger(1, 10);
-
-        System.out.println("Enter a number between 1 and 10");
-        int userNumberF;
-        Scanner scanner = new Scanner(System.in);
-        userNumberF = scanner.nextInt();
-        if (userNumberF <= 10 && userNumberF >= 1) {
-            long fact = 1;
-            for (int i = 1; i <= userNumberF; i++) {
-                fact = fact * i;
-            }
-            System.out.println("factorial of " + userNumberF + " is " + fact);
-        }
+        int aNumber = getInteger(1, 10);
+        System.out.println("you entered: " + aNumber);
+        factorial();
     }
 
     }
