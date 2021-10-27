@@ -33,12 +33,12 @@ public class MethodsExercises {
     public static int getInteger(int min, int max){
         int userNumber;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10 ");
+        System.out.println("Enter a number between " + min + " and " + max);
         userNumber = scanner.nextInt();
-        if(userNumber <= 10 && userNumber >= 1){
+        if(userNumber <= max && userNumber >= min){
             return userNumber;
         } else {
-            userNumber = getInteger(1, 10);
+            userNumber = getInteger(min, max);
         }
         return userNumber;
     }
