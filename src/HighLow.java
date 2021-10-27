@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class HighLow {
 
@@ -6,24 +7,33 @@ public class HighLow {
 
         Random random = new Random();
 
-        int result = random.nextInt(99);  //generate a number from 0 to 99
-        result += 1;                            //trying to get it to be 1-100, not 0-99.
+        boolean confirm;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("The random number is: " + result);
+        do {
+            int result = random.nextInt(99);  //generate a number from 0 to 99
+            result += 1;                            //trying to get it to be 1-100, not 0-99.
 
-        while(true) {
-            int userGuess = MethodsExercises.getInteger(0, 100);  //this pulls my method from another file and asks the user to enter a number from 1-100
+//        System.out.println("The random number is: " + result);
 
-            if (userGuess < result) {
-                System.out.println("guess HIGHER!");
-            } else if (userGuess > result) {
-                System.out.println("guess LOWER!");
-            } else if (userGuess == result) {
-                System.out.println("CONGRATS!!! Good Guess, that's correct");
-                break; //stop the loop
-            } else {
-                System.out.println("not valid");
+            while (true) {
+                int userGuess = MethodsExercises.getInteger(0, 100);  //this pulls my method from another file and asks the user to enter a number from 1-100
+
+                if (userGuess < result) {
+                    System.out.println("guess HIGHER!");
+                } else if (userGuess > result) {
+                    System.out.println("guess LOWER!");
+                } else if (userGuess == result) {
+                    System.out.println("CONGRATS!!! Good Guess, that's correct");
+                    break; //stop the loop
+                } else {
+                    System.out.println("not valid");
+                }
             }
-        }
+            System.out.print("Would you like to play again? Y/N");
+            confirm = scanner.next().equalsIgnoreCase("y");
+        }while(confirm);
     }
 }
+
+//while(true) would run forever, the break statement inside the else if stops it when they guess correctly
