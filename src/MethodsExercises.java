@@ -47,12 +47,14 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         String reply;
         long fact;
+        String middle = "";
         do {
             fact = 1;
             int userNumberF = getInteger(1, 10);
             for (int i = 1; i <= userNumberF; i++) {
+                middle += " x " + i;
                 fact = fact * i;
-                System.out.println(userNumberF + "! = " + i + " x" + fact);
+                System.out.printf("%2d! = %-45s = %d%n", i, middle, fact);
             }
             System.out.println("The Factorial of your number is: " + fact);
             System.out.println("Would you like to enter another number to factorial? Y/N");
