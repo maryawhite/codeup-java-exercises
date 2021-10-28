@@ -19,7 +19,7 @@ public class HighLow {
             int tries = 0;
 
             while (true) {
-                int userGuess = MethodsExercises.getInteger(0, 100);  //this pulls my method from another file and asks the user to enter a number from 1-100
+                int userGuess = MethodsExercises.getInteger(1, 100);  //this pulls my method from another file and asks the user to enter a number from 1-100
 
                 if (userGuess < result) {
                     System.out.println("guess HIGHER!");
