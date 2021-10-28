@@ -70,25 +70,30 @@ public class MethodsExercises {
         return ((int) (Math.random()*(max - min))) + min;
     }
 
-    public static int diceRoll(){
+    public static int askPlayerToRoll(){
         int response;
-        String r;
+        String roll;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("How many sides does your dice have? ");
-        response = scanner.nextInt();
-        System.out.println("you said " + response);
-        System.out.println("Do you want to roll the dice. Press r to roll the dice");
-        r = scanner.nextLine();
-        int randomNum;
-        while(r.equalsIgnoreCase("r")) {
-            randomNum = generateRandomNum(response,1);
-            System.out.println("your random number is " + randomNum);
-            return randomNum;
-        }
-//        } else {
-//            return diceRoll();
-//        }
+        do {
+            System.out.println("How many sides does your dice have? ");
+            response = scanner.nextInt();
+            diceRoll(response);
+
+            System.out.println("Do you want to roll again?. Press r to roll the dice or x to exit");
+            roll = scanner.next();
+        }while(roll.equalsIgnoreCase("r"));
+//            diceRoll(response);
+
         return response;
+    }
+
+    public static int diceRoll(int response){
+        int randomNum;
+        int randomNum2;
+            randomNum = generateRandomNum(response,1);
+            randomNum2 = generateRandomNum(response,1);
+            System.out.println("your rolled a " + randomNum + " and a " + randomNum2);
+            return randomNum + randomNum2;
     }
 
 
@@ -102,7 +107,7 @@ public class MethodsExercises {
         int aNumber = getInteger(1, 10);
         System.out.println("you entered: " + aNumber);
         factorial();
-        diceRoll();
+        askPlayerToRoll();
 
     }
 
