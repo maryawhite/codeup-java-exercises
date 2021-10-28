@@ -11,7 +11,6 @@ public class Input {
     }
 
     public String getString(){
-//        System.out.print("Enter a string");
         return this.scanner.nextLine();
     }
 
