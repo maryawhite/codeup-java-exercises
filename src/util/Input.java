@@ -15,8 +15,16 @@ public class Input {
     }
 
     public boolean yesNo(){
-//        System.out.println("Enter y for yes, n for no");
-        return this.scanner.nextLine().equalsIgnoreCase("y") || this.scanner.nextLine().equalsIgnoreCase("yes");
+        String userInput = this.scanner.nextLine();
+        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
+            return true;
+        }
+//        else if(this.scanner.nextLine().equalsIgnoreCase("n") || this.scanner.nextLine().equalsIgnoreCase("no")){
+//            return false;
+//        } else {
+//            return false;
+//        }
+        return false;
     }
 
     public int getInt(int min, int max){

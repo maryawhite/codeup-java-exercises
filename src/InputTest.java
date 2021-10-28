@@ -10,8 +10,9 @@ public class InputTest {
         String userInput = input.getString();
         System.out.println(userInput);
 
-
-
+        System.out.println("Would you like to continue, y for yes, n for no");
+        boolean confirm = input.yesNo();
+        System.out.println(confirm);
 
 
     }
