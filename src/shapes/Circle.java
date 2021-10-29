@@ -10,9 +10,9 @@ class Circle {
 
     }
 
-    public double shareRadius(){
-        return radius;
-    }
+//    public double shareRadius(){
+//        return radius;
+//    }
 
     public double getArea(double radius){
         return Math.PI * (radius * radius);

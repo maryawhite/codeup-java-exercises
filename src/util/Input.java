@@ -6,6 +6,8 @@ public class Input {
 
     private Scanner scanner;
 
+    //constructor
+    //we don't have to use this in this case because there's no parameter but you can use this
     public Input(){
         this.scanner = new Scanner(System.in);
     }

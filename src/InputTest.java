@@ -4,6 +4,7 @@ public class InputTest {
 
     public static void main(String[] args) {
 
+        //since the methods we created are not static, we need to create a new input object here
         Input input = new Input();  //create an input object/instantiate the input class
 
         System.out.println("Enter any string");

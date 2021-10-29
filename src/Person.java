@@ -2,12 +2,13 @@ public class Person {
 
     private String name;
 
-    private Person(String entername){
-        name = entername;
+    //this is the constructor
+    public Person(String entername){
+        this.name = entername;
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public void setName(String fname){
@@ -22,8 +23,9 @@ public class Person {
 
     public static void main(String[] args) {
 
+        //Create a `main` method on the class that creates a new `Person` object and
+        //tests the above methods.
         Person mary = new Person("Mary W.");
-//        mary.name = "Mary W.";
 
         System.out.println("Return the person's name");
         System.out.println(mary.getName());
@@ -50,9 +52,6 @@ public class Person {
 //        person2.setName("Jane");
 //        System.out.println(person1.getName());
 //        System.out.println(person2.getName());
-
-
-
 
     }
 

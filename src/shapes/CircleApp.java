@@ -8,14 +8,16 @@ public class CircleApp {
 
         Input input = new Input();
 
-        Circle circle = new Circle(3);
-
         System.out.println("Enter a number for the radius: ");
-        int userNum = input.getInt();
+        //I should have used getDouble, not getInt
+//        int userNum = input.getInt();
+        double userNum = input.getDouble();
         System.out.print(userNum);
 
-        System.out.println("The area is: " + circle.getArea(userNum));
-        System.out.println("The circumference is: " + circle.getCircumference(userNum));
+        Circle circle = new Circle(userNum);
+
+        System.out.println("The area is approximately: " + circle.getArea(userNum));
+        System.out.println("The circumference is approximately : " + circle.getCircumference(userNum));
 
     }
 
