@@ -19,11 +19,6 @@ public class Input {
         if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
             return true;
         }
-//        else if(this.scanner.nextLine().equalsIgnoreCase("n") || this.scanner.nextLine().equalsIgnoreCase("no")){
-//            return false;
-//        } else {
-//            return false;
-//        }
         return false;
     }
 
@@ -33,6 +28,7 @@ public class Input {
         if(userNumber <= max && userNumber >= min){
             return userNumber;
         } else {
+            System.out.println("That is not in the range. Enter a new number between" + min + " and " + max);
             return getInt(min, max);
         }
     }
@@ -47,6 +43,7 @@ public class Input {
         if(userNumber <= max && userNumber >= min){
             return userNumber;
         } else {
+            System.out.println("That is not in the range. Enter a new number between" + min + " and " + max);
             return getDouble(min, max);
         }
     }

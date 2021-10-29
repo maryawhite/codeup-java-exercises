@@ -14,6 +14,22 @@ public class InputTest {
         boolean confirm = input.yesNo();
         System.out.println(confirm);
 
+        System.out.println("Enter a number between 1 and 10");
+        int userInt = input.getInt(1, 10);
+        System.out.println(userInt);
+
+        System.out.println("Pick a number, any (integer) number");
+        int userNum = input.getInt();
+        System.out.println("the number you picked is: " + userNum);
+
+        System.out.println("Enter a decimal point number between 1 and 20.");
+        double userDouble = input.getDouble(1,20);
+        System.out.println(userDouble);
+
+        System.out.println("Pick a number, any (decimal) number");
+        double userDou = input.getDouble();
+        System.out.println("the decimal number you picked is: " + userDou);
+
 
     }
 }
