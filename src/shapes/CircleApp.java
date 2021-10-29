@@ -1,7 +1,6 @@
 package shapes;
 
 import util.Input;
-import java.util.Scanner;
 
 public class CircleApp {
 
@@ -15,8 +14,11 @@ public class CircleApp {
         int userNum = input.getInt();
         System.out.print(userNum);
 
-        }
+        System.out.println("The area is: " + circle.getArea(userNum));
+        System.out.println("The circumference is: " + circle.getCircumference(userNum));
 
     }
 
-}
+    }
+
+

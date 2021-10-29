@@ -14,11 +14,11 @@ class Circle {
         return radius;
     }
 
-    public double getArea(){
+    public double getArea(double radius){
         return Math.PI * (radius * radius);
     }
 
-    public double getCircumference(){
+    public double getCircumference(double radius){
         return 2 * Math.PI * radius;
     }
 
