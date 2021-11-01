@@ -4,8 +4,8 @@ public class Candy {
     public String size;  //small medium or large, not a number size
     //the class will need 2 constructors, one for if we know the name, but not the size.
     public Candy(String candyName){
-        name = candyName;
-        size = "Halloween";
+        this.name = candyName;     //you can use this to make it more clear, but it works without this
+        this.size = "Halloween";
     }
     //and the second constructor for if we know both the name and size.
     public Candy(String candyName, String candySize){
@@ -28,6 +28,8 @@ public class Candy {
         System.out.println(yummy2.showMessage());
         System.out.println(yummy3.showMessage());
         System.out.println(yummy4.showMessage());
+        System.out.println(yummy1.name);
+        System.out.println(yummy4.name + " " + yummy4.size);
     }
 
 
