@@ -40,20 +40,20 @@ public class lectureConsoleIO {
         } else {
             System.out.println("Go check the weather");
         }
-
-        int caseSwitch = 1;
-
-        switch (caseSwitch) {
-            case 1:
-                System.out.println("Case 1");
-                break;
-            case 2:
-                System.out.println("Case 2");
-                break;
-            default:
-                System.out.println("Default case");
-                break;
-        }
+//
+//        int caseSwitch = 1;
+//
+//        switch (caseSwitch) {
+//            case 1:
+//                System.out.println("Case 1");
+//                break;
+//            case 2:
+//                System.out.println("Case 2");
+//                break;
+//            default:
+//                System.out.println("Default case");
+//                break;
+//        }
 
 //        int i = 0;
 //        while (i < 10) {
@@ -74,14 +74,14 @@ public class lectureConsoleIO {
 //        }
 
         //the code below will print the odd numbers (bc it is skipping evens)
-        for(int i = 0; i < 25; i++){
-            if (i % 2 == 0){
-                continue;
-            }
-            System.out.println(i);
-        }
-
-    }
+//        for(int i = 0; i < 25; i++){
+//            if (i % 2 == 0){
+//                continue;
+//            }
+//            System.out.println(i);
+//        }
+//
+//    }
 //    public static void promptInput(){
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter 2 numbers: ");
@@ -109,6 +109,27 @@ public class lectureConsoleIO {
 //                System.out.println("idk");
 //                break;
 //        }
-//    }
+        String reply;
+        do {
+            System.out.println("Enter any string: ");
+            String origString = scanner.nextLine();
+            String reverseString = "";              //initialize the string
+
+            char[] characters = origString.toCharArray();  //the toCharArray method takes the string and turns it into an array of chars
+
+            for (int i = characters.length - 1; i >= 0; i--) {     //this is starting at the end and decrementing
+                reverseString = reverseString + characters[i];
+            }
+
+            if (origString.equals(reverseString)) {
+                System.out.println("String is a palindrome");
+            } else {
+                System.out.println("String is not a palindrome");
+            }
+            System.out.println("Would you like to enter another work? enter y or n");
+            reply = scanner.nextLine();
+        }while(reply.equals("y"));
+
+    }
 
 }
