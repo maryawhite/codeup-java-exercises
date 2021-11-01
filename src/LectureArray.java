@@ -12,11 +12,11 @@ public class LectureArray {
         System.out.println("prices.length = " + prices.length);
         System.out.println("diceSides.length = " + diceSides.length);
 //
-//        String[] mybag = {"Snickers", "Reeses", "brussel sprouts"};
-//        //a regular for loop
-////        for(int i = 0; i < mybag.length; i++){
-////            System.out.println(mybag[i]);
-////        }
+        String[] mybag = {"Snickers", "Reeses", "brussel sprouts"};
+        //a regular for loop
+        for(int i = 0; i < mybag.length; i++){
+            System.out.println(mybag[i]);
+        }
 //        //an enhanced for loop (for Each)
 //        for(String candy : mybag){     //you can name candy whatever, one candy of candies, one price of prices, etc
 //            System.out.println(candy);
@@ -29,8 +29,9 @@ public class LectureArray {
 //            System.out.println(candy);
 //        }
 //
-//        String[] mybagplustwo = Arrays.copyOf(mybag, 5);
-//        System.out.println("length of mybagplustwo: " + mybagplustwo.length);
+        String[] mybagplustwo = Arrays.copyOf(mybag, 5);
+        System.out.println("length of mybagplustwo: " + mybagplustwo.length);
+        System.out.println(Arrays.toString(mybagplustwo));
 
 //        //Stringify an array
 //        System.out.println(Arrays.toString(mybagplustwo));
