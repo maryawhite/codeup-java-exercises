@@ -11,24 +11,20 @@ public class Movie {
     }
 
     //Create methods to access these properties and change them (getters and setters).
-    public String getMovieInfo(String name){
-        return "name: " + name;
+    public String getMovieName(){
+        return this.name;
     }
 
-    public String getMovieInfo(String name, String category){
-        return "name: " + name + "category: " + category;
+    public String getMovieCategory(){
+        return this.category;
     }
 
-    public void setMovieInfo(String movieName){
+    public void setMovieName(String movieName){
         this.name = movieName;
     }
 
-    public void setMovieInfo(String movieName, String movieCategory){
-        this.name = movieName;
+    public void setMovieCategory(String movieCategory){
         this.category = movieCategory;
     }
-
-
-
 
 }
