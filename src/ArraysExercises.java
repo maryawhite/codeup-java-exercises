@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArrayExercises {
+public class ArraysExercises {
 
 //    personPlusOne[personPlusOne.length - 1] = "persons.getName();"
 //            System.out.println(Arrays.toString(personPlusOne));
@@ -39,7 +39,7 @@ public class ArrayExercises {
 
        Person number4 = new Person("Charlie");
 
-       Person[] anotherArray = ArrayExercises.addPerson(community,number4);
+       Person[] anotherArray = ArraysExercises.addPerson(community,number4);
        for(Person person : anotherArray){
            System.out.println(person.getName());
        }
