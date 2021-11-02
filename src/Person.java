@@ -1,15 +1,20 @@
 public class Person {
 
     private String name;
+    protected int age;
 
     //this is the constructor
     public Person(String entername){
         this.name = entername;
     }
 
-    public Person() {
-
+    public Person (String entername, int age){
+        this.name = entername;
+        this.age = age;
     }
+
+    //default constructor
+    public Person() {}
 
     public String getName(){
         return this.name;

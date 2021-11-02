@@ -3,6 +3,7 @@ public class LecturePerson {
     public String firstName;
     public String lastName;
     public int age;
+    public String name;
 
     //instance method
     public String joinChat(){
