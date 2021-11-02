@@ -3,11 +3,32 @@ package movies;
 public class Movie {
     private String name;
     private String category;
+    public short rating;
+    //bonus info
+//    public String toString(){
+//        return this.name + " " + this.category + " " + rating;
+//    }
+
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", rating=" + rating +
+                '}';
+    }
 
     //create a constructor, the constructor has the same name as the class.
     public Movie(String movieName, String movieCategory){
         this.name = movieName;
         this.category = movieCategory;
+    }
+
+    public Movie(String movieName, String movieCategory, short rating){
+        this.name = movieName;
+        this.category = movieCategory;
+        this.rating = rating;
     }
 
     //Create methods to access these properties and change them (getters and setters).

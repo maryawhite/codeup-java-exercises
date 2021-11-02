@@ -12,7 +12,7 @@ public class MoviesApplication {
 //            System.out.println(movie.getMovieName());
 //        }
 
-        Movie[] searchResult = new Movie[0];    //this is a new Movie array called searchResult
+//        Movie[] searchResult = new Movie[0];    //this is a new Movie array called searchResult
 //        for(Movie movie : library){
 //            if(movie.getMovieCategory().equalsIgnoreCase("drama")){
 //               searchResult= Arrays.copyOf(searchResult, searchResult.length + 1);
@@ -26,6 +26,9 @@ public class MoviesApplication {
         Input input = new Input();              //import my input class that I created last week
         Scanner scanner = new Scanner(System.in);
 
+        Movie varmovie = new Movie("Shrek", "comedy", (short) 5);  //a literal number in java is by default a double
+        System.out.println("varmovie = " + varmovie);
+
         String userReply;
         OUTER:
         do {
@@ -36,7 +39,8 @@ public class MoviesApplication {
             System.out.println("You selected # " + userChoice);
             for (Movie movie : library) {
                 if (userChoice == 1) {
-                    System.out.println("\t" + movie.getMovieName() + " - " + movie.getMovieCategory());
+//                    System.out.println("\t" + movie.getMovieName() + " - " + movie.getMovieCategory());
+                    System.out.println(movie);
                 }
                 if (userChoice == 2) {
                     //show movies in the category of animated
