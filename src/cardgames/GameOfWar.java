@@ -14,27 +14,47 @@ public class GameOfWar {
 ////            System.out.println(card);
 //
 //        }
-
-        Card player1Card1 = gameHands[random.nextInt(gameHands.length)];
-        Card player2Card2 = gameHands[random.nextInt(gameHands.length)];
-
+        boolean weArePlaying = true;
         short player1Score = 0;
         short player2Score = 0;
+        short counter = 0;
 
-        System.out.println("Player 1 drew a " + player1Card1 + " and Player 2 drew a " + player2Card2);
+        while (weArePlaying) {
 
-        if(player1Card1.value == player2Card2.value){
-            System.out.println("it's a tie, you both get a point");
-            player1Score++;
-            player2Score++;
-        } else if (player1Card1.value > player2Card2.value){
-            System.out.println("Player 1 gets a point.");
-            player1Score++;
-        } else if (player1Card1.value < player2Card2.value){
-            System.out.println("Player 2 gets a point.");
-            player2Score++;
+            Card player1Card1 = gameHands[random.nextInt(gameHands.length)];
+            Card player2Card2 = gameHands[random.nextInt(gameHands.length)];
+
+            System.out.println("Player 1 drew a " + player1Card1 + " and Player 2 drew a " + player2Card2);
+
+            if (player1Card1.value == player2Card2.value) {
+                System.out.println("it's a tie, you both get a point");
+                player1Score++;
+                player2Score++;
+                counter++;
+                System.out.println("Round # " + counter);
+            } else if (player1Card1.value > player2Card2.value) {
+                System.out.println("Player 1 gets a point.");
+                player1Score++;
+                counter++;
+                System.out.println("Round # " + counter);
+
+            } else if (player1Card1.value < player2Card2.value) {
+                System.out.println("Player 2 gets a point.");
+                player2Score++;
+                counter++;
+                System.out.println("Round # " + counter);
+
+            }
+            System.out.println("\tplayer 1 score: " + player1Score + "\n" + "\tplayer 2 score: " + player2Score);
+            if(counter >= 26){
+                if(player1Score > player2Score){
+                    System.out.println("Player 1 WINS!!!");
+                } else {
+                    System.out.println("Player 2 WINS!!!");
+                }
+                break;
+            }
         }
-        System.out.println("\tplayer 1 score: " + player1Score + "\n" + "\tplayer 2 score: " + player2Score);
     }
 
 }
