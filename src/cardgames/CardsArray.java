@@ -16,7 +16,8 @@ public class CardsArray {
                 new Card("hearts", (short) 10, "jack"), //jack
                 new Card("hearts", (short) 11, "queen"), //queen
                 new Card("hearts", (short) 12, "king"), //king
-                new Card("hearts", (short) 13, "ace"), //acenew Card("hearts", (short) 2),
+                new Card("hearts", (short) 13, "ace"), //ace
+                new Card("diamonds", (short) 2, "2"),
                 new Card("diamonds", (short) 3, "3"),
                 new Card("diamonds", (short) 4, "4"),
                 new Card("diamonds", (short) 5, "5"),
@@ -27,7 +28,9 @@ public class CardsArray {
                 new Card("diamonds", (short) 10, "jack"), //jack
                 new Card("diamonds", (short) 11, "queen"), //queen
                 new Card("diamonds", (short) 12, "king"), //king
-                new Card("diamonds", (short) 13, "ace"), //acenew Card("diamonds", (short) 3),
+                new Card("diamonds", (short) 13, "ace"), //ace
+                new Card("spades", (short) 3, "2"),
+                new Card("spades", (short) 3, "3"),
                 new Card("spades", (short) 4, "4"),
                 new Card("spades", (short) 5, "5"),
                 new Card("spades", (short) 6, "6"),
@@ -38,6 +41,9 @@ public class CardsArray {
                 new Card("spades", (short) 11, "queen"), //queen
                 new Card("spades", (short) 12, "king"), //king
                 new Card("spades", (short) 13, "ace"), //ace
+                new Card("clubs", (short) 5, "2"),
+                new Card("clubs", (short) 5, "3"),
+                new Card("clubs", (short) 5, "4"),
                 new Card("clubs", (short) 5, "5"),
                 new Card("clubs", (short) 6, "6"),
                 new Card("clubs", (short) 7, "7"),
