@@ -5,19 +5,10 @@ public class Movie {
     private String category;
     public short rating;
     //bonus info
-//    public String toString(){
-//        return this.name + " " + this.category + " " + rating;
-//    }
-
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "name='" + name + '\'' +
-                ", category='" + category + '\'' +
-                ", rating=" + rating +
-                '}';
+    public String toString(){
+        return this.name + " " + this.category + " " + rating;
     }
+
 
     //create a constructor, the constructor has the same name as the class.
     public Movie(String movieName, String movieCategory){
