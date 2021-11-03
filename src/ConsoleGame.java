@@ -40,11 +40,14 @@ public class ConsoleGame {
 
                 String userInput1 = input.nextLine();
                 if (userInput1.equals("1")) {
-                    int damageDealt = rand.nextInt(playerAttackDamage);  //this will generate a random number bw 0 and 50
+                    int damageDealt = rand.nextInt(playerAttackDamage);  //this will generate a random number bw 0 and 45
                     int damageTaken = rand.nextInt(enemyAttackDamage);   //this will be a random number bw 0 and 25
 
                     enemyHealth -= damageDealt;  //5 health, attack 10 -- -5 //if the damageDealt > enemyHealth then break "congrats
                     playerHealth -= damageTaken;
+
+                    System.out.println("\t*** You strike the witch for " + damageDealt + " damage. Her remaining health is " + enemyHealth);
+                    System.out.println("\t*** You receive " + damageTaken + " damage. Your remaining health is " + playerHealth);
 
                     if(playerHealth < 1){
                         System.out.println("\t*** You have taken too much damage and are too weak to go on. The witch has turned you into a toad.");
