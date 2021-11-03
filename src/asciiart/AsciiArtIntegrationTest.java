@@ -11,5 +11,6 @@ public class AsciiArtIntegrationTest {
 
         asciiArt.drawString(text, "*", settings);
     }
+
 }
 

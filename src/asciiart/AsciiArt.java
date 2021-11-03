@@ -36,6 +36,7 @@ public class AsciiArt {
 
     }
 
+
     private BufferedImage getImageIntegerMode(int width, int height) {
         return new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
     }
@@ -59,6 +60,14 @@ public class AsciiArt {
             this.width = width;
             this.height = height;
         }
+    }
+
+    public static void main(String[] args) {
+        StringBuilder str = new StringBuilder();
+        str.append("GFG");
+        System.out.println("string = " + str.toString());
+        
+
     }
 
 }
