@@ -18,12 +18,17 @@ public class ShapesTest {
         System.out.println("myShape.getArea() = " + myShape.getArea());
         System.out.println("myShape.getPerimeter() = " + myShape.getPerimeter());
 
-        Quadrilateral myQuad = new Square(5);
-        System.out.println("myQuad.getArea() = " + myQuad.getArea());
+//        //my work is above, ShanShans way is below, different way of using Measurable myShape:
+//        Measurable myShape = new Rectangle(4, 5);
+//        System.out.println("myShape.getArea() = " + myShape.getArea());
+
+//        Quadrilateral myQuad = new Square(5);
+//        System.out.println("myQuad.getArea() = " + myQuad.getArea());
 
 
 
-        //comment out previous work below, new exercise above
+
+        //comment out previous work below, new exercise is above
 //        Rectangle box1 = new Rectangle(5, 4);
 //
 //        System.out.println(box1.getPerimeter());
