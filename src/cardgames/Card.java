@@ -2,8 +2,9 @@ package cardgames;
 
 public class Card {
     String suit;
-    short value;
+    short value;         //if I make this value private then I can't use player1Card1.value in my GameOfWar class
     String name;
+
 
     //constructor here to create the suit and value and name
     public Card(String suit, short value, String name){

@@ -26,7 +26,8 @@ public class GameOfWar {
 
             System.out.println("Player 1 drew a " + player1Card1 + " and Player 2 drew a " + player2Card2);
 
-            if (player1Card1.value == player2Card2.value) {
+            short player1cardvalue = player1Card1.getValue();     //the difference between have a private visibility and default visibility, if the field is private we would have to use getValue(), but since the field is not private, we can use player2Card2.value.
+            if (player1cardvalue == player2Card2.value) {
                 System.out.println("it's a tie, you both get a point");
                 player1Score++;
                 player2Score++;
