@@ -7,10 +7,11 @@ public class Student {
     private ArrayList<Integer> grades;
 
     //a constructor to set the name property and initialize the grades property as an empty ArrayList
-    public Student(String name, ArrayList<Integer> grades) {
+    public Student(String name) {   //you don't have to have 2 parameters
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
+
 
     //methods
     public String getName() {
@@ -34,20 +35,15 @@ public class Student {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> grades = new ArrayList<>();  //initalize a new grades arrayList
-        Student mary = new Student("Mary", grades);
+        Student mary = new Student("Mary");
         mary.addGrade(100);
         mary.addGrade(80);
-        System.out.println(grades);
-        System.out.println(mary.getName());
         System.out.println("mary.getGradeAverage() = " + mary.getGradeAverage());
-        ArrayList<Integer> grades2 = new ArrayList<>();
-        Student kevin = new Student("Kevin", grades2);
+        Student kevin = new Student("Kevin");
         kevin.addGrade(100);
         kevin.addGrade(90);
         System.out.println("kevin.getGradeAverage() = " + kevin.getGradeAverage());
-        ArrayList<Integer> grades3 = new ArrayList<>();
-        Student steven = new Student("Steven", grades3);
+        Student steven = new Student("Steven");
         steven.addGrade(90);
         steven.addGrade(85);
         System.out.println("steven.getGradeAverage() = " + steven.getGradeAverage());
