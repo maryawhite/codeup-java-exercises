@@ -10,14 +10,14 @@ public class GameOfWar {
 
         Card[] gameHands = CardsArray.getAllCards();
 
-//        for(Card card : gameHands){
-////            System.out.println(card);
-//
-//        }
         boolean weArePlaying = true;
         short player1Score = 0;
         short player2Score = 0;
         short counter = 0;
+
+        System.out.println("Welcome to the game of War. This is a twist on the classic card game \"War\". There is an array of 52 cards.  2 cards are dealt at random. \n" +
+                "Whichever player has the highest card wins that round (Aces are the highest value). \n" +
+                "The game plays 26 rounds and the player with the most rounds won, wins the game.\n ");
 
         while (weArePlaying) {
 
@@ -57,5 +57,7 @@ public class GameOfWar {
             }
         }
     }
-
 }
+//this is a twist on the classic card game "War". There is an array of 52 cards.  2 cards are dealt at random.
+// whichever player has the highest card wins that round (Aces are the highest value).
+// The game plays 26 rounds and the player with the most rounds won, wins the game.
