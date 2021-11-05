@@ -71,8 +71,7 @@ public class GradesApplication {
                     prompting = false;
                 }
             }
-
-        }
+        } //end of while loop
 
 
 //        ArrayList<String> keys = new ArrayList<>(students.keySet());
