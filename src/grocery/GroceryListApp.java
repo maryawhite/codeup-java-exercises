@@ -1,3 +1,5 @@
+package grocery;
+
 import util.Input;
 
 public class GroceryListApp {
