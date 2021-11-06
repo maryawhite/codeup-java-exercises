@@ -2,10 +2,20 @@ package grocery;
 
 import util.Input;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class GroceryListApp {
+    //a map to store unsorted values
+    static Map<String, Integer> map = new HashMap<>();
+    //function to sort a HashMap by Key from Geeks for Geeks website
+    public static void sortByKey(HashMap<String, Integer> map){
+        //TreeMap to store values of HashMap
+        //copy all data from HashMap to TreeMap
+        TreeMap<String, Integer> sorted = new TreeMap<>(map);
+        //display the TreeMp which is naturally sorted
+        for (Map.Entry<String, Integer> entry : sorted.entrySet())
+            System.out.print("\t" + entry.getKey() + " " + entry.getValue() + ", \n");
+    }
 
     public static void main(String[] args) {
         Input input = new Input();
@@ -93,7 +103,23 @@ public class GroceryListApp {
             if(!input.yesNo()){
                 running = false;
             }
+
         } //end of outer loop
-        System.out.println("Here's your list " + dairyMap + produceMap + frozenMap + bakeryMap + deliMap + meatSeafoodMap + otherMap);
+//        System.out.println("Here's your list: " + "Dairy " + sortByKey(dairyMap) + " Produce " + produceMap + " Frozen " + frozenMap + " Bakery " + bakeryMap + " Deli " + deliMap + " Meat/Seafood " + meatSeafoodMap + " Other " + otherMap);
+        System.out.println("Here's your list: ");
+        System.out.println("Bakery");
+        sortByKey(bakeryMap);
+        System.out.println("Dairy");
+        sortByKey(dairyMap);
+        System.out.println("Deli");
+        sortByKey(deliMap);
+        System.out.println("Frozen");
+        sortByKey(frozenMap);
+        System.out.println("Meat/Seafood");
+        sortByKey(meatSeafoodMap);
+        System.out.println("Produce");
+        sortByKey(produceMap);
+        System.out.println("Other");
+        sortByKey(otherMap);
     }
 }
