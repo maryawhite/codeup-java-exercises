@@ -16,13 +16,17 @@ public class Input {
         return this.scanner.nextLine();
     }
 
-    public boolean yesNo(){
-        String userInput = this.scanner.nextLine();
-        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
-            return true;
-        }
-        return false;
-    }
+//    public boolean yesNo(){
+//        String userInput = this.scanner.nextLine();
+//        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")){
+//            return true;
+//        }
+//        return false;
+//    }
+public boolean yesNo(){
+    String userInput = this.scanner.nextLine();
+    return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
+}
 
     public int getInt(int min, int max){
         int userNumber;
