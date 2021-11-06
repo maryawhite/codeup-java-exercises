@@ -24,27 +24,25 @@ public class GameOfWar {
             Card player1Card1 = gameHands[random.nextInt(gameHands.length)];
             Card player2Card2 = gameHands[random.nextInt(gameHands.length)];
 
+            //while player1card equals player2card . . draw another card for player2?
+            //set a flag to false for all cards, after that card has been played, set the boolean to true
+
             System.out.println("Player 1 drew a " + player1Card1 + " and Player 2 drew a " + player2Card2);
 
 //            short player1cardvalue = player1Card1.getValue();     //the difference between have a private visibility and default visibility, if the field is private we would have to use getValue(), but since the field is not private, we can use player2Card2.value.
-//            player2Card2.value = 100;
             if (player1Card1.value == player2Card2.value) {
-//                System.out.println("player1 value " + player1Card1.value + ". player2 value" + player2Card2.value);
                 System.out.println("it's a tie, you both get a point");
                 player1Score++;
                 player2Score++;
                 counter++;
                 System.out.println("Round # " + counter);
             } else if (player1Card1.value > player2Card2.value) {
-//                System.out.println("player1 value " + player1Card1.value + ". player2 value" + player2Card2.value);
                 System.out.println("Player 1 gets a point.");
                 player1Score++;
                 counter++;
                 System.out.println("Round # " + counter);
 
             } else if (player1Card1.value < player2Card2.value) {
-//                System.out.println("player1 value " + player1Card1.value + ". player2 value" + player2Card2.value);
-
                 System.out.println("Player 2 gets a point.");
                 player2Score++;
                 counter++;
@@ -58,7 +56,7 @@ public class GameOfWar {
                 } else {
                     System.out.println("Player 2 WINS!!!");
                 }
-                break;
+                weArePlaying = false;
             }
         }
     }
