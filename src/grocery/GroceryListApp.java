@@ -30,13 +30,13 @@ public class GroceryListApp {
 
         //first prompt:
         System.out.println("Hello, would you like to create a grocery list? y for yes, n for n");
-        OUTER:
-        do {
+        boolean running = true;
+        while(running) {
             if (input.yesNo()) {      //this pulls up scanner.nextLine(); if y or yes it returns true
                 System.out.println("Please enter a number for the category: ");
                 System.out.println(categories);
                 int userEntry = input.getInt();  //input.getInt returns scanner.nextInt()
-                input.getString();             //clear out the scanner
+                input.getString();             //clear out the scanner returns scanner.nextLine()
 
                 do {
                     if (userEntry == 1) {
@@ -83,15 +83,17 @@ public class GroceryListApp {
                         otherMap.put(userItemEntry, userQty);
                     } else {
                         System.out.println("Invalid response");
-                        break OUTER;
+                        break;
                     }
                     input.getString(); //clear out the scanner?  //this one prevents it from asking you 2 questions
-
                     System.out.println("Do you want to add another item in this same category. Y/N");
                 } while (input.yesNo());    ////this pulls up scanner.nextLine(); if y or yes it returns true
             }
-            System.out.println("Do you want to continue. Y/N");
-        }while(input.yesNo());
+            System.out.println("Do you want to continue adding items? Y/N");  //it is prompting me twice to yes...
+            if(!input.yesNo()){
+                running = false;
+            }
+        } //end of outer loop
         System.out.println("Here's your list " + dairyMap + produceMap + frozenMap + bakeryMap + deliMap + meatSeafoodMap + otherMap);
     }
 }
