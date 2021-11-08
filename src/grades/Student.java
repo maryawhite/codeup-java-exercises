@@ -23,11 +23,11 @@ public class Student {
     }
 
     public double getGradeAverage(){
-        Integer sum = 0;
+        double sum = 0;
         if(grades.isEmpty()){
             return 0;  //how do I prevent it from dividing by zero?
         }
-        for(Integer oneGrade : grades){
+        for(int oneGrade : grades){
                 sum += oneGrade;
         }
         return sum/grades.size();
@@ -39,6 +39,7 @@ public class Student {
         mary.addGrade(100);
         mary.addGrade(80);
         System.out.println("mary.getGradeAverage() = " + mary.getGradeAverage());
+        System.out.println(mary.grades);
         Student kevin = new Student("Kevin");
         kevin.addGrade(100);
         kevin.addGrade(90);

@@ -65,17 +65,12 @@ public class GradesApplication {
                 System.out.println("\tName:" + students.get(userResponse).getName() + "\n\tGitHub username: " + userResponse + "\n\tCurrent Average: " + students.get(userResponse).getGradeAverage());
                 System.out.println("Would you like to see another student? y for yes, n for no");
                 if (input.yesNo()) {
-                    continue;
+                    prompting = true;
                 } else{
                     System.out.println("Goodbye, and have a wonderful day!");
                     prompting = false;
                 }
             }
         } //end of while loop
-
-
-//        ArrayList<String> keys = new ArrayList<>(students.keySet());
-//        System.out.println("keys = " + keys);
     }
-
 }
