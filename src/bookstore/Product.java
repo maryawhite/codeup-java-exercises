@@ -23,5 +23,7 @@ public class Product {
         this.price = new BigDecimal("price");
     }
 
-
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 }

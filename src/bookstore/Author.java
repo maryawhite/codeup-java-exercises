@@ -9,8 +9,13 @@ public class Author extends Person {
         super(name);
     }
 
+    //getter for counter
     public int getCounter() {
         return counter;
     }
 
+    //constructor for the counter
+    public Author(int counter) {
+        this.counter = counter;
+    }
 }

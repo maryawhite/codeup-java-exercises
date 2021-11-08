@@ -13,6 +13,8 @@ public class Bookstore {
 
         //make 5 books
 //        Book book1 = new Book ("huck finn", "29.99", author1);
+        Book booka = new Book("20000 Leagues Under the Sea");
+//        booka.setPrice("29.99");
 
         Customer customer1 = new Customer("Mary");
         Customer customer2 = new Customer("Sarah");

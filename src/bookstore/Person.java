@@ -8,8 +8,17 @@ public class Person {
     public Person(){
     }
 
+    //constructor
     public Person(String name) {
         this.name = name;
     }
 
+    //getter
+    public String getName() {
+        return name;
+    }
+
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 }

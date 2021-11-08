@@ -24,5 +24,13 @@ public class Book extends Product{
         this.author = author;
     }
 
+    //getter
+    public Author getAuthor() {
+        return author;
+    }
 
+    //setter
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
 }
