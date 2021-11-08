@@ -9,7 +9,12 @@ public class Book extends Product{
         super(title);
     }
 
-    public Book(BigDecimal price) {
+    public Book(String title, BigDecimal price, Author author) {
+        super(title, price);
+        this.author = author;
+    }
+
+        public Book(BigDecimal price) {
         super(price);
     }
 

@@ -3,8 +3,8 @@ package bookstore;
 import java.math.BigDecimal;
 
 public class Product {
+    //Create a Product class w/ title and price and constructor that sets those properties
     private String title;
-//    private float price;       //should use BigDecimal for currency....
     BigDecimal price;
 
     //default constructor
@@ -14,8 +14,13 @@ public class Product {
         this.title = title;
     }
 
+    public Product(String title, BigDecimal price){
+        this.title = title;
+        this.price = new BigDecimal("price");  //not sure how to use BigDecimal...
+    }
+
     public Product(BigDecimal price) {
-        this.price = price;
+        this.price = new BigDecimal("price");
     }
 
 
