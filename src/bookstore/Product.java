@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class Product {
     //Create a Product class w/ title and price and constructor that sets those properties
     private String title;
-    BigDecimal price;
+    double price;
 
     //default constructor
     public Product(){}
@@ -14,24 +14,16 @@ public class Product {
         this.title = title;
     }
 
-    public Product(String title, BigDecimal price){
+    public Product(String title, double price){
         this.title = title;
-        this.price = new BigDecimal("price");  //not sure how to use BigDecimal...
+        this.price = price;
     }
 
-    public Product(BigDecimal price) {
-        this.price = new BigDecimal("price");
-    }
-
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
     public String getTitle() {
         return title;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
     }
 }

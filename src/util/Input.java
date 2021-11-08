@@ -31,6 +31,7 @@ public boolean yesNo(){
 //    public int getInt(){
 //        return this.scanner.nextInt();
 //    }
+
 //    //modify getInt to use Integer.valueOf(getString()) and try and catch
     public int getInt(){
         try{
