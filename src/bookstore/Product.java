@@ -23,6 +23,14 @@ public class Product {
         this.price = new BigDecimal("price");
     }
 
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
     public void setPrice(BigDecimal price) {
         this.price = price;
     }

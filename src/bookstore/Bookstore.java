@@ -12,9 +12,10 @@ public class Bookstore {
         Author author3 = new Author("Stephen King");
 
         //make 5 books
-//        Book book1 = new Book ("huck finn", "29.99", author1);
-        Book booka = new Book("20000 Leagues Under the Sea");
-//        booka.setPrice("29.99");
+        Book book1 = new Book ("huck finn", "29.99", author1);
+//        System.out.println(book1.getPrice()); //these print null
+//        System.out.println(book1.getAuthor());
+//        System.out.println(book1.getTitle());
 
         Customer customer1 = new Customer("Mary");
         Customer customer2 = new Customer("Sarah");
