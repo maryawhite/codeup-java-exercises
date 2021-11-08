@@ -31,7 +31,7 @@ public boolean yesNo(){
 //    public int getInt(){
 //        return this.scanner.nextInt();
 //    }
-
+//    //modify getInt to use Integer.valueOf(getString()) and try and catch
     public int getInt(){
         try{
             return Integer.valueOf(getString());
@@ -55,8 +55,7 @@ public boolean yesNo(){
 //    public double getDouble(){
 //        return this.scanner.nextDouble();
 //    }
-    //modify getDouble to use Integer.valueOf(getString()) and try and catch
-
+    //modify getDouble to use Double.valueOf(getString()) and try and catch
     public double getDouble(){
         try{
             return Double.valueOf(getString());
@@ -75,6 +74,26 @@ public boolean yesNo(){
             System.out.println("That is not in the range. Enter a new number between" + min + " and " + max);
             return getDouble(min, max);
         }
+    }
+
+    //getBinary
+    public int getBinary(){
+        try{
+            return Integer.valueOf(getString(), 2);
+        } catch(Exception e){
+            System.out.println("Please enter a valid number");
+        }
+        return getBinary();
+    }
+
+    //getHexidecimal
+    public int getHexadecimal(){
+        try{
+            return Integer.valueOf(getString(), 16);
+        } catch(Exception e){
+            System.out.println("Please enter a valid entry.");
+        }
+        return getHexadecimal();
     }
 
 
