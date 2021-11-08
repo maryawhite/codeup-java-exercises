@@ -28,6 +28,19 @@ public boolean yesNo(){
     return userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes");
 }
 
+//    public int getInt(){
+//        return this.scanner.nextInt();
+//    }
+
+    public int getInt(){
+        try{
+            return Integer.valueOf(getString());
+        } catch (Exception e){
+            System.out.println("Please enter an integer.");
+            return getInt();
+        }
+    }
+
     public int getInt(int min, int max){
         int userNumber;
         userNumber = this.scanner.nextInt();
@@ -39,8 +52,18 @@ public boolean yesNo(){
         }
     }
 
-    public int getInt(){
-        return this.scanner.nextInt();
+//    public double getDouble(){
+//        return this.scanner.nextDouble();
+//    }
+    //modify getDouble to use Integer.valueOf(getString()) and try and catch
+
+    public double getDouble(){
+        try{
+            return Double.valueOf(getString());
+        } catch(Exception e){
+            System.out.println("Please enter a decimal(double) number.");
+            return getDouble();
+        }
     }
 
     public double getDouble(double min, double max){
@@ -54,8 +77,5 @@ public boolean yesNo(){
         }
     }
 
-    public double getDouble(){
-        return this.scanner.nextDouble();
-    }
 
 }
