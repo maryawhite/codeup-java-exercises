@@ -39,9 +39,9 @@ public class GroceryListApp {
         HashMap<String, Integer> otherMap = new HashMap<>();
 
         //first prompt:
-        System.out.println("Hello, would you like to create a grocery list? y for yes, n for n");
-        boolean running = true;
-        while(running) {
+        System.out.println("Hello, would you like to create a grocery list? y for yes, n for no");
+        do {
+            System.out.println("We did this already");
             if (input.yesNo()) {      //this pulls up scanner.nextLine(); if y or yes it returns true
                 System.out.println("Please enter a number for the category: ");
                 System.out.println(categories);
@@ -100,12 +100,10 @@ public class GroceryListApp {
                 } while (input.yesNo());    ////this pulls up scanner.nextLine(); if y or yes it returns true
             }
             System.out.println("Do you want to continue adding items? Y/N");  //it is prompting me twice to yes...
-            if(!input.yesNo()){
-                running = false;
-            }
+        }while (input.yesNo());
 
-        } //end of outer loop
-//        System.out.println("Here's your list: " + "Dairy " + sortByKey(dairyMap) + " Produce " + produceMap + " Frozen " + frozenMap + " Bakery " + bakeryMap + " Deli " + deliMap + " Meat/Seafood " + meatSeafoodMap + " Other " + otherMap);
+
+
         System.out.println("Here's your list: ");
         System.out.println("Bakery");
         sortByKey(bakeryMap);
