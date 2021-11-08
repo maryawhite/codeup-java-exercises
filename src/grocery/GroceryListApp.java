@@ -41,12 +41,11 @@ public class GroceryListApp {
         //first prompt:
         System.out.println("Hello, would you like to create a grocery list? y for yes, n for no");
         do {
-            System.out.println("We did this already");
             if (input.yesNo()) {      //this pulls up scanner.nextLine(); if y or yes it returns true
                 System.out.println("Please enter a number for the category: ");
                 System.out.println(categories);
                 int userEntry = input.getInt();  //input.getInt returns scanner.nextInt()
-                input.getString();             //clear out the scanner returns scanner.nextLine()
+//                input.getString();             //clear out the scanner returns scanner.nextLine()
 
                 do {
                     if (userEntry == 1) {
@@ -95,7 +94,7 @@ public class GroceryListApp {
                         System.out.println("Invalid response");
                         break;
                     }
-                    input.getString(); //clear out the scanner?  //this one prevents it from asking you 2 questions
+//                    input.getString(); //clear out the scanner?  //this one prevents it from asking you 2 questions
                     System.out.println("Do you want to add another item in this same category. Y/N");
                 } while (input.yesNo());    ////this pulls up scanner.nextLine(); if y or yes it returns true
             }
