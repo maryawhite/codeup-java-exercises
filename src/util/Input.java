@@ -58,6 +58,7 @@ public boolean yesNo(){
     //modify getDouble to use Double.valueOf(getString()) and try and catch
     public double getDouble(){
         try{
+            scanner.nextLine(); //clear out the scanner from last time it used nextInt?
             return Double.valueOf(getString());
         } catch(Exception e){
             System.out.println("Please enter a decimal(double) number.");
@@ -79,6 +80,7 @@ public boolean yesNo(){
     //getBinary
     public int getBinary(){
         try{
+            scanner.nextLine(); //clear out the scanner from last time it used nextInt?
             return Integer.valueOf(getString(), 2);
         } catch(Exception e){
             System.out.println("Please enter a valid number");
