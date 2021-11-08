@@ -40,67 +40,61 @@ public class GroceryListApp {
 
         //first prompt:
         System.out.println("Hello, would you like to create a grocery list? y for yes, n for no");
-        do {
-            if (input.yesNo()) {      //this pulls up scanner.nextLine(); if y or yes it returns true
+        while(input.yesNo()){
                 System.out.println("Please enter a number for the category: ");
                 System.out.println(categories);
                 int userEntry = input.getInt();  //input.getInt returns scanner.nextInt()
-//                input.getString();             //clear out the scanner returns scanner.nextLine()
-
-                do {
-                    if (userEntry == 1) {
-                        System.out.println("Enter your item for the category of Dairy: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        dairyMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 2) {
-                        System.out.println("Enter your item for the category of Produce: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        produceMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 3) {
-                        System.out.println("Enter your item for the category of Frozen: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        frozenMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 4) {
-                        System.out.println("Enter your item for the category of Bakery: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        bakeryMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 5) {
-                        System.out.println("Enter your item for the category of Deli: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        deliMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 6) {
-                        System.out.println("Enter your item for the category of Meat/Seafood: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        meatSeafoodMap.put(userItemEntry, userQty);
-                    } else if (userEntry == 7) {
-                        System.out.println("Enter your item for the category of Other: ");
-                        String userItemEntry = input.getString();
-                        System.out.println("Enter Quantity");
-                        int userQty = input.getInt();
-                        otherMap.put(userItemEntry, userQty);
-                    } else {
-                        System.out.println("Invalid response");
-                        break;
-                    }
-//                    input.getString(); //clear out the scanner?  //this one prevents it from asking you 2 questions
-                    System.out.println("Do you want to add another item in this same category. Y/N");
-                } while (input.yesNo());    ////this pulls up scanner.nextLine(); if y or yes it returns true
-            }
-            System.out.println("Do you want to continue adding items? Y/N");  //it is prompting me twice to yes...
-        }while (input.yesNo());
-
+                    do {
+                        if (userEntry == 1) {
+                            System.out.println("Enter your item for the category of Dairy: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            dairyMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 2) {
+                            System.out.println("Enter your item for the category of Produce: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            produceMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 3) {
+                            System.out.println("Enter your item for the category of Frozen: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            frozenMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 4) {
+                            System.out.println("Enter your item for the category of Bakery: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            bakeryMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 5) {
+                            System.out.println("Enter your item for the category of Deli: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            deliMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 6) {
+                            System.out.println("Enter your item for the category of Meat/Seafood: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            meatSeafoodMap.put(userItemEntry, userQty);
+                        } else if (userEntry == 7) {
+                            System.out.println("Enter your item for the category of Other: ");
+                            String userItemEntry = input.getString();
+                            System.out.println("Enter Quantity");
+                            int userQty = input.getInt();
+                            otherMap.put(userItemEntry, userQty);
+                        } else {
+                            System.out.println("Invalid response");
+                            break;
+                        }
+                        System.out.println("Do you want to add another item in this same category. Y/N");
+                    } while (input.yesNo());    ////this pulls up scanner.nextLine(); if y or yes it returns true
+            System.out.println("Do you want to continue adding items? Y/N");  //it is prompting me twice for no
+        }
 
 
         System.out.println("Here's your list: ");
@@ -118,5 +112,7 @@ public class GroceryListApp {
         sortByKey(produceMap);
         System.out.println("Other");
         sortByKey(otherMap);
+
     }
 }
+
