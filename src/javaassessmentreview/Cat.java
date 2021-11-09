@@ -1,4 +1,4 @@
-package java;
+package javaassessmentreview;
 
 public class Cat extends Pet implements Meowable{
 
@@ -24,5 +24,10 @@ public class Cat extends Pet implements Meowable{
 
     public void meow() {
         System.out.println("This is a meow!");
+    }
+
+    public static void main(String[] args) {
+        Cat cat = new Cat(6, true, "kerry", "brown");
+        cat.meow();
     }
 }

@@ -1,4 +1,4 @@
-package java;
+package javaassessmentreview;
 
 import java.util.Arrays;
 

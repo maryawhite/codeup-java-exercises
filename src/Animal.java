@@ -33,6 +33,8 @@ public class Animal {
 
     public static void main(String[] args) {
 
+//        Scanner scanner = new Scanner(System.in);
+
         Animal lion = new Animal("lion", "Panthera");
         System.out.println(lion.getName());
         System.out.println(lion.getSpecies());
