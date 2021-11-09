@@ -13,12 +13,15 @@ public class Bookstore {
 
         //make 5 books
         Book book1 = new Book ("Huck Finn", 29.99, author1);
-        Book book2 = new Book ("The Shining", 19.99, author3);
-        System.out.println(book1.getPrice()); //these print null
-        System.out.println(book1.getAuthor());
-        System.out.println(book1.getTitle());
-        System.out.println(book1.getAuthor().toString());
-        System.out.println(book1);
+        Book book2 = new Book ("Heart of Darkness", 32.99, author2);
+        Book book3 = new Book ("The Shining", 19.99, author3);
+        System.out.println("line 18:  " + book1.getPrice());
+//        System.out.println("line 19:  " + book1.getAuthor());
+        System.out.println("line 20:  " + book1.getTitle());
+//        System.out.println("line 21:" + book1.getAuthor().toString());
+        System.out.println("line22:  " + book1.price);
+        System.out.println("line23:  " + author1.getName());   //this is the author name
+
 
         Customer customer1 = new Customer("Mary");
         Customer customer2 = new Customer("Sarah");
@@ -32,11 +35,6 @@ public class Bookstore {
         Customer[] customers = {customer1, customer2, customer3, customer4, customer5, customer6, customer7, customer8};
 
 //now make the customers buy 1 or 2 books...
-
-
-
-
-
 
 
     }
