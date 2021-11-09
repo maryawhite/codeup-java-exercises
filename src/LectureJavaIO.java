@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class LectureJavaIO {
@@ -41,6 +42,7 @@ public class LectureJavaIO {
         //reading from the file and print to the console
         List<String> printList = Files.readAllLines(groceriesTxtPath); //takes in a file path
         System.out.println("printList = " + printList);
+
 
 
         //we can write our own print method
