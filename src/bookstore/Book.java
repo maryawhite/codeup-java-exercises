@@ -10,15 +10,8 @@ public class Book extends Product{
         this.author = author;
     }
 
-    //getter
-    public Author getAuthor() {
-        return this.author;
-    }
-
     @Override
     public String toString() {
-        return "Book{" +
-                "author=" + author +
-                '}';
+        return "Title: " + getTitle() + " " + "Price: " + getPrice() + " " + "Author: " + author.getName();
     }
 }

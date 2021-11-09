@@ -15,12 +15,25 @@ public class Bookstore {
         Book book1 = new Book ("Huck Finn", 29.99, author1);
         Book book2 = new Book ("Heart of Darkness", 32.99, author2);
         Book book3 = new Book ("The Shining", 19.99, author3);
-        System.out.println("line 18:  " + book1.getPrice());
-//        System.out.println("line 19:  " + book1.getAuthor());
+        Book book4 = new Book("Salem's Lot", 8.99, author3);
+        Book book5 = new Book("Typhoon", 16.99, author2);
+        System.out.println("line 20:  " + book1.getPrice());
+
         System.out.println("line 20:  " + book1.getTitle());
-//        System.out.println("line 21:" + book1.getAuthor().toString());
-        System.out.println("line22:  " + book1.price);
         System.out.println("line23:  " + author1.getName());   //this is the author name
+        System.out.println(book1);
+        System.out.println(book2);
+        System.out.println(book3);
+        System.out.println(book4);
+        System.out.println(book5);
+
+        //Not part of the bonus...
+        //Create an array of book and iterate through it with an enhanced for loop
+        Book[] books = {book1, book2, book3, book4, book5};
+        System.out.println("---Looping through an array of books---");
+        for ( Book oneBook : books) {
+            System.out.println(oneBook);
+        }
 
 
         Customer customer1 = new Customer("Mary");
