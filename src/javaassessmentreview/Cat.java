@@ -29,5 +29,7 @@ public class Cat extends Pet implements Meowable{
     public static void main(String[] args) {
         Cat cat = new Cat(6, true, "kerry", "brown");
         cat.meow();
+//        Cat nullCat = new Cat(14, false, null);  //testing my exception, it works if you uncomment these 2 lines
+//        nullCat.meow();
     }
 }
