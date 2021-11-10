@@ -19,6 +19,7 @@ public class Bookstore {
         Book book5 = new Book("Typhoon", 16.99, author2);
         System.out.println("line 20:  " + book1.getPrice());
 
+
         System.out.println("line 20:  " + book1.getTitle());
         System.out.println("line23:  " + author1.getName());   //this is the author name
         System.out.println(book1);
