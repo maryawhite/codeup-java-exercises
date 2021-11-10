@@ -31,11 +31,20 @@ public class Animal {
         return "I am " + name.toUpperCase() + " hear me roar!";
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", species='" + species + '\'' +
+                '}';
+    }
+
     public static void main(String[] args) {
 
 //        Scanner scanner = new Scanner(System.in);
 
         Animal lion = new Animal("lion", "Panthera");
+        Animal cat = new Animal ("Tiger", "Felis catus");
         System.out.println(lion.getName());
         System.out.println(lion.getSpecies());
         System.out.println(lion.roar());
