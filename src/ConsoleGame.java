@@ -10,13 +10,10 @@ public class ConsoleGame {
         Random rand = new Random();
 
         //Enemy variables
-//        int enemyHealth = 75;  //this variable needs to be inside the loop so that it resets when the game starts over
         int enemyAttackDamage = 25;
 
         //Player variables
-//        int playerHealth = 100;   //this variable needs to be inside the loop so that it resets when the game starts over
         int playerAttackDamage = 45;
-//        int magicBall = 1;        //this variable needs to be inside the loop so that it resets when the game starts over
 
         boolean running = true;  //set this to true for your while loop
 
