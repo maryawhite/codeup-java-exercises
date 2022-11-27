@@ -35,10 +35,8 @@ public class HighLow {
                     } else {
                         System.out.println("not valid");
                     }
-                    tries++;
                 }
             }
-            tries = 0;
             System.out.print("Would you like to play again? Y/N");
             confirm = scanner.next().equalsIgnoreCase("y");
         }while(confirm);
